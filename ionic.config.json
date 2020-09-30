@@ -1,0 +1,7 @@
+{
+  "name": "OnPremApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
