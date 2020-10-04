@@ -11,6 +11,8 @@ pipeline {
 
        stage('NPM Setup') {
           steps {
+             sh 'whoami'
+	     sh 'id'
              sh 'docker run hello-world'
          }
        }
