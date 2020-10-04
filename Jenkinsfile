@@ -1,7 +1,6 @@
 pipeline {
 
-    agent any 
-    // { docker { image  'ghcr.io/ionic-team/ionic-cli:6.11.10' } }
+    agent { docker { image  'ghcr.io/ionic-team/ionic-cli:6.11.10' } }
 
     environment {
         PATH='/home/bitnami/.nvm/versions/node/v12.18.4/bin:/opt/bitnami/apache/bin:/opt/bitnami/apache2/bin:/opt/bitnami/common/bin:/opt/bitnami/git/bin:/opt/bitnami/gonit/bin:/opt/bitnami/java/bin:/opt/bitnami/java/jre/bin:/opt/bitnami/nami/bin:/opt/bitnami/apache/bin:/opt/bitnami/apache2/bin:/opt/bitnami/common/bin:/opt/bitnami/git/bin:/opt/bitnami/gonit/bin:/opt/bitnami/java/bin:/opt/bitnami/java/jre/bin:/opt/bitnami/nami/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games'
@@ -12,7 +11,7 @@ pipeline {
 
        stage('NPM Setup') {
           steps {
-             sh 'whoami'
+             sh 'npm install'
          }
        }
 
