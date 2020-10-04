@@ -5,21 +5,15 @@ pipeline {
           args '-v $PWD:/usr/src/app/ -u 0:0'
 	    }
 	}
+    environment {
+        IONIC_TOKEN = credentials('ionic-token')
+    }
     stages {
 
-       stage('NPM Setup') {
+       stage('Android Debug Build') {
           steps {
-	     sh 'ls -l'
-             sh 'ionic --version'
-	     sh 'ionic info'
+             sh 'ionic package build android debug'
          }
        }
-
-       stage('Ionic Info') {
-	       steps {
-	           sh 'ionic info'
-	       }
-       }
-
     }
 }
