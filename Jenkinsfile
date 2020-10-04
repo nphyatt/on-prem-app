@@ -9,6 +9,7 @@ pipeline {
 
        stage('NPM Setup') {
           steps {
+	     sh 'ls -l'
              sh 'ionic --version'
 	     sh 'ionic info'
          }
