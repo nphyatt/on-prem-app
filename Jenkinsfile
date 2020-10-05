@@ -1,7 +1,7 @@
 pipeline {
 	agent {
 	    docker {
-	      image  'ghcr.io/ionic-team/ionic-cli:6.11.10'
+	      image  'ghcr.io/ionic-team/ionic-cli:6.11.11'
               args '-v $PWD:/usr/src/app/ -u 0:0'
 	    }
 	}
